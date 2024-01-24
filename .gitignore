@@ -1,27 +1,16 @@
-# Project build files
-build/
-deps/
+# Compiled Java
+out/
 
 # Saved traces
 traces/
 *.trace
 
-# Sublime files
-*.sublime-workspace
-
-
 # IntelliJ
-.out-idea/
 .idea/workspace.xml
 .idea/tasks.xml
-.idea/dictionaries/
-.idea/copyright/
-.idea/runConfigurations.xml
+.idea-out
 
-
-# Python
-*.pyc
-
+submit.tar.gz
 
 # Common OS/Editor files
 *~
@@ -33,11 +22,3 @@ traces/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
-
-
-# Vim files
-*.swp
-
-
-# Gradle
-.gradle/
