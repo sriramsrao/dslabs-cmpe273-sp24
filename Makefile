@@ -55,10 +55,17 @@ submit.tar.gz: $(JAVA_SRC)
 	@ # prevent MacOS extended attrs from generating extra files
 	@ COPYFILE_DISABLE=1 tar -cvzf $@ labs/*/src
 
+submit.zip: $(JAVA_SRC)
+	@ echo "[format]"
+	@ java -jar jars/google-java-format.jar -i $(JAVA_SRC)
+	@ echo "[zip] submit.zip"
+	@ # prevent MacOS extended attrs from generating extra files
+	@ COPYFILE_DISABLE=1 zip $@ -r labs/*/src
+
 
 clean:
 	@ echo "[clean]"
-	@ rm -rf $(OUT) submit.tar.gz
+	@ rm -rf $(OUT) submit.tar.gz submit.zip
 
 clean-all: clean
 	@ echo "[clean-all]"
